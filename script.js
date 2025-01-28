@@ -23,4 +23,5 @@ function beforesubmit(event) {
 
  function captchsuccess() {
     captchChecked = true;
+    console.log("captchChecked", captchChecked);
  }
