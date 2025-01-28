@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web To Lead form</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
     <h1>Create Lead</h1>
+   
     
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdL000006I0fg" method="POST" 
     onsubmit="beforesubmit()">
@@ -16,6 +18,7 @@
     <input type=hidden name="oid" value="00DdL000006I0fg">
     <input type=hidden name="retURL" value="https://trailhead.salesforce.com">
     <input type=hidden name="Lead_Date__c" class="outputdate">
+    <input type=hidden name='captcha_settings' value='{"keyname":"WebToLeadBootcamp","fallback":"true","orgId":"00DdL000006I0fg","ts":""}'>
     
     
     <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
@@ -28,6 +31,8 @@
     <input type="date" required="true" class="inputdate"/>
     <!--<span class="dateInput dateOnlyInput"><input  id="00NdL00000Cqy7d" name="00NdL00000Cqy7d" size="12" type="text" /></span><br>-->
     
+    <div class="g-recaptcha" data-sitekey="6LeZrMQqAAAAAHrRkjtYHGkwoh8VWtMsxvQPoqEP"></div><br>
+
     <input type="submit" name="submit" class="submit">
     
     </form>

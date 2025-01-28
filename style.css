@@ -39,3 +39,9 @@ margin top right bottom left
 margin 25px 50px 75px   100px
 margin 25px auto 
 */
+
+.g-recaptcha {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
